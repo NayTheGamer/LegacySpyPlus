@@ -1,4 +1,5 @@
 ﻿using System;
+using LegacySpyPlus.Properties;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,9 +14,9 @@ using System.Windows.Media.Imaging;
 using System.ComponentModel;
 using System.Windows.Shapes;
 
-using NintendoSpy.Readers;
+using LegacySpyPlus.Readers;
 
-namespace NintendoSpy
+namespace LegacySpyPlus
 {
     public partial class ViewWindow : Window, INotifyPropertyChanged
     {

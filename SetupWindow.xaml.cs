@@ -1,4 +1,5 @@
 ﻿using System;
+using LegacySpyPlus.Properties;
 using System.Linq;
 using System.Collections.Generic;
 using System.IO.Ports;
@@ -8,12 +9,12 @@ using System.Windows.Data;
 using System.Windows.Media;
 using System.Windows.Threading;
 
-using NintendoSpy.Readers;
+using LegacySpyPlus.Readers;
 using System.ComponentModel;
 using System.IO;
 using System.Text;
 
-namespace NintendoSpy
+namespace LegacySpyPlus
 {
     public partial class SetupWindow : Window
     {
@@ -29,7 +30,7 @@ namespace NintendoSpy
             DataContext = _vm;
 
             if (! Directory.Exists ("skins")) {
-                MessageBox.Show ("Could not find skins folder!", "NintendoSpy", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show ("Could not find skins folder!", "LegacySpyPlus", MessageBoxButton.OK, MessageBoxImage.Error);
                 Close ();
                 return;
             }
@@ -80,7 +81,7 @@ namespace NintendoSpy
             StringBuilder msg = new StringBuilder ();
             msg.AppendLine ("Some skins were unable to be parsed:");
             foreach (var err in errs) msg.AppendLine (err);
-            MessageBox.Show (msg.ToString (), "NintendoSpy", MessageBoxButton.OK, MessageBoxImage.Error);
+            MessageBox.Show (msg.ToString (), "LegacySpyPlus", MessageBoxButton.OK, MessageBoxImage.Error);
         }
 
         void updatePortList () {
@@ -132,7 +133,7 @@ namespace NintendoSpy
 #else
             catch (Exception ex) {
 #endif
-                MessageBox.Show (ex.Message, "NintendoSpy", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show (ex.Message, "LegacySpyPlus", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
             this.Show ();
@@ -254,4 +255,3 @@ namespace NintendoSpy
         }
     }
 }
-

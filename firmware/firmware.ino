@@ -1,5 +1,5 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// NintendoSpy Firmware for Arduino
+// LegacySpyPlus Firmware for Arduino
 // v1.0.1
 // Written by jaburns
 
@@ -12,7 +12,7 @@
 // Bridge one of the analog GND to the right analog IN to enable your selected mode
 //#define MODE_DETECT
 // ---------------------------------------------------------------------------------
-// The only reason you'd want to use 2-wire SNES mode is if you built a NintendoSpy
+// The only reason you'd want to use 2-wire SNES mode is if you built a LegacySpyPlus
 // before the 3-wire firmware was implemented.  This mode is for backwards
 // compatibility only.
 //#define MODE_2WIRE_SNES
