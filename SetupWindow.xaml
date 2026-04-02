@@ -5,17 +5,17 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:options="http://microsoft.com"
         xmlns:RuntimeBinder="clr-namespace:Microsoft.CSharp.RuntimeBinder;assembly=Microsoft.CSharp" x:Class="LegacySpyPlus.SetupWindow"
-        Title="LegacySpyPlus" Height="419.966" Width="602" Foreground="White" Background="#FF1E1E1E">
-    <Grid>
-        <ComboBox Margin="145,17,10,0" SelectedIndex="0" VerticalAlignment="Top" BorderBrush="#FF444444" IsReadOnly="True" 
+        Title="LegacySpyPlus (v0.2)" Height="650" Width="720" Foreground="Black" Background="#FF1C1C26" BorderBrush="#FFA7A7E2"> 
+    <Grid>           
+        <ComboBox Margin="145,17,10,0" SelectedIndex="0" VerticalAlignment="Top" BorderBrush="#FF444444" IsReadOnly="True"             
                   SelectionChanged="SourceSelectComboBox_SelectionChanged"
                   ItemsSource="{Binding Sources.Items}"
                   DisplayMemberPath="Name"
                   SelectedValue="{Binding Sources.SelectedItem}" />
-        <Label Content="Controller Source:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Foreground="#FFCBCBCB" FontFamily="Cascadia Mono" FontSize="16"/>
-        <Label Name="ComPortLabel" Content="COM Port:" HorizontalAlignment="Left" Margin="59,45,0,0" VerticalAlignment="Top" Foreground="#FFCBCBCB" FontFamily="Cascadia Mono" FontSize="16"
+        <Label Content="Controller Source:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Foreground="#FFCBCBCB" FontFamily="Cascadia Mono" FontSize="12"/>
+        <Label Name="ComPortLabel" Content="COM Port:" HorizontalAlignment="Left" Margin="59,45,0,0" VerticalAlignment="Top" Foreground="#FFCBCBCB" FontFamily="Cascadia Mono" FontSize="12"
                Visibility="{Binding ComPortOptionVisibility}" />
-        <Label Name="ControllerIdLabel" Content="Controller:" HorizontalAlignment="Left" Margin="59,45,0,0" VerticalAlignment="Top" Foreground="#FFCBCBCB" FontFamily="Cascadia Mono" FontSize="16"
+        <Label Name="ControllerIdLabel" Content="Controller:" HorizontalAlignment="Left" Margin="59,45,0,0" VerticalAlignment="Top" Foreground="#FFCBCBCB" FontFamily="Cascadia Mono" FontSize="12"
                Visibility="{Binding XIAndGamepadOptionVisibility}" />
         <ComboBox Name="ComPortCombo" Margin="145,51,10,0" VerticalAlignment="Top" BorderBrush="#FF444444" IsReadOnly="True" 
                   ItemsSource="{Binding Ports.Items}"
@@ -25,13 +25,13 @@
                   ItemsSource="{Binding XIAndGamepad.Items}"
                   SelectedValue="{Binding XIAndGamepad.SelectedItem}" 
                   Visibility="{Binding XIAndGamepadOptionVisibility}" />
-        <Label Content="Viewer Skin:" HorizontalAlignment="Left" Margin="10,111,0,0" VerticalAlignment="Top" Foreground="#FFCBCBCB" FontFamily="Cascadia Mono" FontSize="16" />
-        <ListBox Margin="10,146,265.2,47.4" Background="#FF1D1D1D" Foreground="#FFCBCBCB" BorderBrush="#FF3E3E42" BorderThickness="2" FontFamily="Cascadia Mono" FontSize="16"
+        <Label Content="Viewer Skin:" HorizontalAlignment="Left" Margin="10,111,0,0" VerticalAlignment="Top" Foreground="#FFCBCBCB" FontFamily="Cascadia Mono" FontSize="12" />
+        <ListBox Margin="10,146,265.2,47.4" Background="#FF262638" Foreground="#FFCBCBCB" BorderBrush="#FF3E3E42" BorderThickness="2" FontFamily="Cascadia Mono" FontSize="12"
                  SelectedIndex="0"
                  ItemsSource="{Binding Skins.Items}"
                  DisplayMemberPath="Name"
                  SelectedValue="{Binding Skins.SelectedItem}" SelectionChanged="Skin_SelectionChanged" />
-        <TextBox Name="txtDelay" Margin="145,85,10,0" VerticalAlignment="Top" Height="24    " Text="{Binding DelayInMilliseconds}" FontSize="16" FontFamily="Cascadia Mono" Background="#FF3E3E42" Foreground="#FFCBCBCB" BorderBrush="#FF656565" TextAlignment="Right" />
+        <TextBox Name="txtDelay" Margin="145,85,10,0" VerticalAlignment="Top" Height="24" Text="{Binding DelayInMilliseconds}" FontSize="12" FontFamily="Cascadia Mono" Background="#FF3E3E42" Foreground="#FFCBCBCB" BorderBrush="#FF656565" TextAlignment="Right" />
 <Border CornerRadius="15" 
         Background="#3E3E42" 
         Margin="10,0,10,10" 
@@ -42,15 +42,15 @@
             Background="Transparent" 
             BorderThickness="0" 
             Foreground="White" 
-            FontSize="16" 
+            FontSize="20" 
             Click="goButton_Click" />
 </Border>
-        <ListBox Margin="0,146,10.2,47.4" Background="#FF1D1D1D" Foreground="#FFCBCBCB" BorderBrush="#FF3E3E42" BorderThickness="2" FontFamily="Cascadia Mono" FontSize="16"
+        <ListBox Margin="0,146,10.2,47.4" Background="#FF262638" Foreground="#FFCBCBCB" BorderBrush="#FF3E3E42" BorderThickness="2" FontFamily="Cascadia Mono" FontSize="12"
             SelectedIndex="0"
             ItemsSource="{Binding Backgrounds.Items}"
 
             DisplayMemberPath="Name"
             SelectedValue="{Binding Backgrounds.SelectedItem}" HorizontalAlignment="Right" Width="250" />
-        <Label x:Name="DelayLabel" Content="Delay (ms):" HorizontalAlignment="Left" Margin="54,81,0,0" VerticalAlignment="Top" Foreground="#FFCBCBCB" FontFamily="Cascadia Mono" FontSize="16" />
+        <Label x:Name="DelayLabel" Content="Delay (ms):" HorizontalAlignment="Left" Margin="54,81,0,0" VerticalAlignment="Top" Foreground="#FFCBCBCB" FontFamily="Cascadia Mono" FontSize="12" />
     </Grid>
 </Window>
