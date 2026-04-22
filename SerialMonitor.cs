@@ -10,13 +10,14 @@ namespace LegacySpyPlus
 
     public class SerialMonitor
     {
-        const int BAUD_RATE = 115200;
-        const int TIMER_MS  = 30;
+        const int BAUD_RATE = 105200;
+        const int TIMER_MS  = 16;
 
         public event PacketEventHandler PacketReceived;
         public event EventHandler Disconnected;
 
-        SerialPort _datPort;
+        SerialPort
+            _datPort;
         List <byte> _localBuffer;
 
         DispatcherTimer _timer;

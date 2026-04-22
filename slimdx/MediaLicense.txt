@@ -1,4 +1,4 @@
-All of the SlimDX media is covered by the Creative Commons Attribution-Share Alike 3.0 License:
+All of the SharpDX media is covered by the Creative Commons Attribution-Share Alike 3.0 License:
 http://creativecommons.org/licenses/by-sa/3.0/us/
 
 You are free:

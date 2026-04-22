@@ -111,8 +111,8 @@ Backup*/
 
 
 
-# Include everything in slimdx
-!slimdx
-!slimdx/
-!slimdx/*
-!slimdx/**/*
+# Include everything in SharpDX
+!SharpDX
+!SharpDX/
+!SharpDX/*
+!SharpDX/**/*

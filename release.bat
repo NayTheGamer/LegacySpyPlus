@@ -13,8 +13,8 @@ cd bin\Release
 "C:\Program Files\7-Zip\7z.exe" a ..\..\NintendoSpy-release.zip NintendoSpy.exe
 cd ..\..
 
-cd slimdx\x64
-"C:\Program Files\7-Zip\7z.exe" a ..\..\NintendoSpy-release.zip SlimDX.dll
+cd SharpDX\x64
+"C:\Program Files\7-Zip\7z.exe" a ..\..\NintendoSpy-release.zip SharpDX.dll
 cd ..\..
 
 "C:\Program Files\7-Zip\7z.exe" a NintendoSpy-release.zip skins

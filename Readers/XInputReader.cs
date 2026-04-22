@@ -54,7 +54,7 @@ namespace LegacySpyPlus.Readers
 
     // ----------------------------------------------------------------------------------------------------------------
 
-        const double TIMER_MS = 30;
+        const double TIMER_MS = 6;
 
         DispatcherTimer _timer;
         uint _id = 0;

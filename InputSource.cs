@@ -17,10 +17,10 @@ namespace LegacySpyPlus
         static public readonly InputSource CLASSICCONTROLLER = new InputSource ("classiccontroller", "Classic Controller", true, false, port => new SerialControllerReader (port, ClassicController.ReadFromPacket));
         static public readonly InputSource SWITCH = new InputSource ("switch", "NintendoSwitch", false, true, port =>  new SerialControllerReader (port, NintendoSwitch.ReadFromPacket));     
         static public readonly InputSource PC360 = new InputSource ("pc360", "PC 360", false, true, controllerId => new XInputReader (uint.Parse(controllerId)));      
-        static public readonly InputSource PAD = new InputSource ("generic", "Generic PC Gamepad", false, true, controllerId => new GamepadReader (int.Parse(controllerId)));
+//        static public readonly InputSource PAD = new InputSource ("generic", "Generic PC Gamepad", false, true, controllerId => new GamepadReader (int.Parse(controllerId)));
 
         static public readonly IReadOnlyList <InputSource> ALL = new List <InputSource> {
-            NES, SNES, N64, MD_GENESIS, GAMECUBE, CLASSICCONTROLLER, PC360, SWITCH, PAD
+            NES, SNES, N64, MD_GENESIS, GAMECUBE, CLASSICCONTROLLER, PC360, SWITCH//, //PAD
         };
 
         static public readonly InputSource DEFAULT = PC360;

@@ -8,6 +8,7 @@ using System.Windows.Media;
 using System.Windows.Controls;
 using System.Xml.Linq;
 using System.Windows.Media.Imaging;
+using System.Windows.Threading;
 using System.Xml;
 
 namespace LegacySpyPlus
@@ -100,7 +101,8 @@ namespace LegacySpyPlus
 
             Name = readStringAttr (doc.Root, "name");
             Author = readStringAttr (doc.Root, "author");
-            Type = InputSource.ALL.First (x => x.TypeTag == readStringAttr (doc.Root, ("type")));
+            Type = InputSource.ALL.First(x => x.TypeTag == readStringAttr(doc.Root, ("type")));
+
 
             if (Type == null) {
                 throw new ConfigParseException ("Illegal value specified for skin attribute 'type'.");

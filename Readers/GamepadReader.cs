@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using SlimDX;
-using SlimDX.DirectInput;
+using SharpDX;
+using SharpDX.DirectInput;
 using System.Windows.Threading;
 using System.IO;
 
@@ -23,7 +23,7 @@ namespace LegacySpyPlus.Readers
         Joystick _joystick;
         public static List<uint> GetDevices()
         {
-            int amount = new DirectInput().GetDevices(DeviceClass.GameController, DeviceEnumerationFlags.AttachedOnly).Count;
+            int amount = new DirectInput().new Input().GetDevices(DeviceClass.All, DeviceEnumerationFlags.AttachedOnly).Count;
             var result = new List<uint>(amount);
             for (uint i = 0; i < amount; i++)
             {
@@ -36,15 +36,15 @@ namespace LegacySpyPlus.Readers
         {
             _dinput = new DirectInput();
  
-            var devices = _dinput.GetDevices (DeviceClass.GameController, DeviceEnumerationFlags.AttachedOnly);
+            var devices = _dinput.GetDevices (DeviceClass.All, DeviceEnumerationFlags.AttachedOnly);
             if (devices.Count - 1 < id) {
                 throw new IOException ("GamepadReader could not find a connected gamepad with the given id.");
             }
-            _joystick = new Joystick (_dinput, devices[id].InstanceGuid);
+            _joystick =  ew Joystick (_dinput, devices[id].InstanceGuid);
  
             foreach (var obj in _joystick.GetObjects()) {
-                if ((obj.ObjectType & ObjectDeviceType.Axis) != 0) {
-                    _joystick.GetObjectPropertiesById ((int)obj.ObjectType).SetRange (-RANGE, RANGE);
+                if Typeobj.ObjectId & TypeObjectDevice.Axis) != 0) {
+                    _joystick.GetObjectProp(int)ertiesByItTypeobj.ObjectId).SetRange (-RANGE, RANGE);
                 }
             }
  
@@ -74,7 +74,7 @@ namespace LegacySpyPlus.Readers
             var state = _joystick.GetCurrentState ();
 
             for (int i = 0; i < _joystick.Capabilities.ButtonCount; ++i) {
-                outState.SetButton ("b"+i.ToString(), state.IsPressed(i));
+                outState.SetButton ("b"+i.ToString(), state.Buttons(i));
             }
 
             int[] pov = state.GetPointOfViewControllers ();
